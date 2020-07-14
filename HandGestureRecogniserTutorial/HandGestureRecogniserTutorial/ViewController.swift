@@ -16,6 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var gestureView: UIImageView!
     @IBOutlet weak var playerView: PlayerView!
     
+    //Camera Properties
+    let captureSession = AVCaptureSession()
+    var captureDevice: AVCaptureDevice!
+    var devicePosition: AVCaptureDevice.Position = .front
+    
+    //Vision
+    var requests = [VNRequest]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +35,19 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        prepareCamera()
     }
     
     func setUpVision() {
+        //classification model
+        guard let visionModel = try? VNCoreMLModel(for: HandGesturesModel1().model) else {
+            fatalError("Can't load vision model.")
+        }
         
+        let classificationRequest = VNCoreMLRequest(model: visionModel, completionHandler: self.handleClassification)
+        classificationRequest.imageCropAndScaleOption = .centerCrop
+        
+        self.requests = [classificationRequest]
     }
     
     func setUpPlayer() {
@@ -44,6 +60,9 @@ class ViewController: UIViewController {
         airplay.center.x = self.view.center.x
         airplay.tintColor = UIColor.white
         self.view.addSubview(airplay)
+    }
+    
+    func handleClassification(request: VNRequest, error: Error?) {
     }
 
 

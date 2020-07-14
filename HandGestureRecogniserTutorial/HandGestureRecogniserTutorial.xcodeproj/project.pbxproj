@@ -14,6 +14,8 @@
 		EABBC4AF24B32DD800D50949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EABBC4AE24B32DD800D50949 /* Assets.xcassets */; };
 		EABBC4B224B32DD800D50949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABBC4B024B32DD800D50949 /* LaunchScreen.storyboard */; };
 		EABBC4BB24B3304800D50949 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBC4BA24B3304800D50949 /* PlayerView.swift */; };
+		EABBC4C024BDA69500D50949 /* HandGesturesModel1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EABBC4BF24BDA69500D50949 /* HandGesturesModel1.mlmodel */; };
+		EABBC4C324BDA81C00D50949 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBC4C224BDA81C00D50949 /* ViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EABBC4B124B32DD800D50949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EABBC4B324B32DD800D50949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EABBC4BA24B3304800D50949 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		EABBC4BF24BDA69500D50949 /* HandGesturesModel1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = HandGesturesModel1.mlmodel; path = ../../../HandGesturesModel1.mlmodel; sourceTree = "<group>"; };
+		EABBC4C224BDA81C00D50949 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		EABBC4A424B32DD600D50949 /* HandGestureRecogniserTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				EABBC4C124BDA7F100D50949 /* Extensions */,
+				EABBC4BC24BDA1E100D50949 /* Models */,
 				EABBC4B924B3302D00D50949 /* Views */,
 				EABBC4A524B32DD600D50949 /* AppDelegate.swift */,
 				EABBC4A724B32DD600D50949 /* SceneDelegate.swift */,
@@ -76,6 +82,22 @@
 				EABBC4BA24B3304800D50949 /* PlayerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EABBC4BC24BDA1E100D50949 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EABBC4BF24BDA69500D50949 /* HandGesturesModel1.mlmodel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EABBC4C124BDA7F100D50949 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EABBC4C224BDA81C00D50949 /* ViewControllerExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +175,8 @@
 				EABBC4A624B32DD600D50949 /* AppDelegate.swift in Sources */,
 				EABBC4A824B32DD600D50949 /* SceneDelegate.swift in Sources */,
 				EABBC4BB24B3304800D50949 /* PlayerView.swift in Sources */,
+				EABBC4C324BDA81C00D50949 /* ViewControllerExtensions.swift in Sources */,
+				EABBC4C024BDA69500D50949 /* HandGesturesModel1.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
