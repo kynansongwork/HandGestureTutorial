@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="height" constant="411" id="NGS-f0-j8J"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHJ-FL-5pu">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHJ-FL-5pu" customClass="PlayerView" customModule="HandGestureRecogniserTutorial" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="148" width="414" height="180"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -44,7 +44,7 @@
                     </view>
                     <connections>
                         <outlet property="gestureView" destination="EAf-l7-MMR" id="Le2-70-eQe"/>
-                        <outlet property="playerView" destination="iHJ-FL-5pu" id="DDx-6o-l0B"/>
+                        <outlet property="playerView" destination="iHJ-FL-5pu" id="FsJ-I8-f8O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -11,4 +11,18 @@ import AVFoundation
 
 class PlayerView: UIView {
     
+    var player: AVPlayer!
+    var playerLayer: AVPlayerLayer!
+    
+    func setPlayerURL(url: URL) {
+        //To initialize player.
+        player = AVPlayer(url: url)
+        player.allowsExternalPlayback = true
+        
+        playerLayer = AVPlayerLayer(player: player)
+        playerLayer.videoGravity = .resizeAspectFill
+        
+        self.layer.addSublayer(playerLayer)
+        playerLayer.frame = self.bounds
+    }
 }
