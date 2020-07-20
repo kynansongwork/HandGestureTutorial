@@ -63,6 +63,24 @@ class ViewController: UIViewController {
     }
     
     func handleClassification(request: VNRequest, error: Error?) {
+        //Deals with classifications from the vision framework.
+        
+        guard let observations = request.results else {
+            print("No results")
+            return
+        }
+        
+        //Transforming into usable objects.
+        let classifications = observations
+            .compactMap({$0 as? VNClassificationObservation})
+            //Checking if elements have a confidence of greater than 50%.
+            .filter({$0.confidence > 0.5})
+            //Getting array of identifiers.
+            .map({$0.identifier})
+        
+        print(classifications)
+        
+        
     }
 
 
