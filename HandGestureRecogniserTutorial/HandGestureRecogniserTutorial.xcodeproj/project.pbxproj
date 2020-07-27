@@ -16,6 +16,7 @@
 		EABBC4BB24B3304800D50949 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBC4BA24B3304800D50949 /* PlayerView.swift */; };
 		EABBC4C024BDA69500D50949 /* HandGesturesModel1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EABBC4BF24BDA69500D50949 /* HandGesturesModel1.mlmodel */; };
 		EABBC4C324BDA81C00D50949 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBC4C224BDA81C00D50949 /* ViewControllerExtensions.swift */; };
+		EABBC4C624CEBF2C00D50949 /* RemoteCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABBC4C524CEBF2C00D50949 /* RemoteCommands.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EABBC4BA24B3304800D50949 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		EABBC4BF24BDA69500D50949 /* HandGesturesModel1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = HandGesturesModel1.mlmodel; path = ../../../HandGesturesModel1.mlmodel; sourceTree = "<group>"; };
 		EABBC4C224BDA81C00D50949 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		EABBC4C524CEBF2C00D50949 /* RemoteCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommands.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		EABBC4A424B32DD600D50949 /* HandGestureRecogniserTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				EABBC4C424CEBF1F00D50949 /* Enums */,
 				EABBC4C124BDA7F100D50949 /* Extensions */,
 				EABBC4BC24BDA1E100D50949 /* Models */,
 				EABBC4B924B3302D00D50949 /* Views */,
@@ -98,6 +101,14 @@
 				EABBC4C224BDA81C00D50949 /* ViewControllerExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EABBC4C424CEBF1F00D50949 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				EABBC4C524CEBF2C00D50949 /* RemoteCommands.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 				EABBC4AA24B32DD600D50949 /* ViewController.swift in Sources */,
 				EABBC4A624B32DD600D50949 /* AppDelegate.swift in Sources */,
 				EABBC4A824B32DD600D50949 /* SceneDelegate.swift in Sources */,
+				EABBC4C624CEBF2C00D50949 /* RemoteCommands.swift in Sources */,
 				EABBC4BB24B3304800D50949 /* PlayerView.swift in Sources */,
 				EABBC4C324BDA81C00D50949 /* ViewControllerExtensions.swift in Sources */,
 				EABBC4C024BDA69500D50949 /* HandGesturesModel1.mlmodel in Sources */,
@@ -252,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -306,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -321,6 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 632LZ235K6;
 				INFOPLIST_FILE = HandGestureRecogniserTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 632LZ235K6;
 				INFOPLIST_FILE = HandGestureRecogniserTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -24,6 +24,24 @@ class ViewController: UIViewController {
     //Vision
     var requests = [VNRequest]()
     
+    //Add an image buffer to make sure recognised image is correct.
+    let bufferSize = 3
+    var commandBuffer = [RemoteCommand]()
+    
+    var currentCommand: RemoteCommand = .none {
+        didSet {
+            commandBuffer.append(currentCommand)
+            
+            if commandBuffer.count == bufferSize {
+                if commandBuffer.filter({$0 == currentCommand}).count == bufferSize {
+                    //send command
+                    showAndSendCommand(command: currentCommand)
+                }
+                commandBuffer.removeAll()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,7 +98,38 @@ class ViewController: UIViewController {
         
         print(classifications)
         
+        switch classifications.first {
+        case "None":
+            currentCommand = .none
+        case "Open":
+            currentCommand = .open
+        case "Fist":
+            currentCommand = .fist
+        case "Thumbs":
+            currentCommand = .thumbsUp
+        default:
+            currentCommand = .none
+        }
+    }
+    
+    func showAndSendCommand(command: RemoteCommand) {
         
+        //To update UI, place on main thread.
+        DispatchQueue.main.async {
+            // if/else statement in tutorial.
+            switch command {
+            case .open:
+                self.playerView.player.play()
+                self.gestureView.image = UIImage(named: command.rawValue)
+            case .fist:
+                self.playerView.player.pause()
+                self.gestureView.image = UIImage(named: command.rawValue)
+            case .thumbsUp:
+                self.gestureView.image = UIImage(named: command.rawValue)
+            default:
+                break
+            }
+        }
     }
 
 
